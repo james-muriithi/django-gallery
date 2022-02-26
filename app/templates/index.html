@@ -1,6 +1,46 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'content' %}
 <section id="body" class="pt-5 h-100">
+    <div class="container-fluid h-100">
+        <div class="banner row h-100 text-dark align-items-center">
+            <div class="col-lg-7 position-relative px-md-4">
+                <div class="details col-xl-9">
+                    <h1 class="catch-phrase">
+                        Capture every <span
+                            class="beatiful border rounded-circle border-primary border-4">beatiful</span> <span
+                            class="text-primary">moment</span> as it happens
+                    </h1>
+                    <p class="description pt-3">
+                        We take photography to a whole new level.
+                    </p>
+                </div>
+
+
+                <div class="order-now mt-5">
+                    <button class="btn btn-secondary text-uppercase small px-4">
+                        View gallery
+                    </button>
+                    <div class="social-icons d-none d-md-flex mt-5">
+                        <div class="icon me-3 border border-1 border-dark rounded-circle">
+                            <img src="{% static './images/twitter.png' %}" alt="facebook" class="img-fluid">
+                        </div>
+                        <div class="icon me-3 border border-1 border-dark rounded-circle">
+                            <img src="{% static './images/youtube.png' %}" alt="facebook" class="img-fluid">
+                        </div>
+                        <div class="icon border border-1 border-dark rounded-circle">
+                            <img src="{% static './images/instagram.png' %}" alt="facebook" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 h-100 py-5 d-lg-block d-none">
+                <div class="position-relative bg-secondary shadow h-100 w-100 banner-image-section">
+                    <img src="{% static './images/gallery-image.png' %}" alt="" class="position-absolute img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+{% include 'partials/gallery-section.html' %}
 {% endblock %}
