@@ -1,0 +1,26 @@
+{% load static %}
+<div class="gallery-card shadow">
+    <div class="gallery-image position-relative">
+        <div data-url="#" data-bs-toggle="tooltip" tabindex="0" data-bs-placement="top" title="Copy image url"
+            class="share bg-secondary rounded-circle position-absolute d-flex justify-content-center align-items-center">
+            <span class="material-icons">share</span>
+        </div>
+        <img src="{% static './images/hotel.png' %}" alt="" class="img-fluid" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+    </div>
+    <div class="details p-3 pb-4">
+        <a href="#" class="fw-bold fs-3 h2 text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Diani
+            Hotel</a>
+        <p class="text-muted">22 May, 2022</p>
+
+        <div class="d-flex">
+            <a href="#" class="btn btn-outline-primary px-3 py-1 text-sm me-3">
+                Diani
+            </a>
+            <a href="#" class="btn btn-outline-primary px-3 py-1 text-sm me-3">
+                Hotels
+            </a>
+        </div>
+    </div>
+</div>
+{% include 'partials/image-modal.html' %}
