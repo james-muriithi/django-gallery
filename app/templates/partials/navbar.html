@@ -1,0 +1,53 @@
+<!-- navbar -->
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100">
+    <div class="container-fluid w-100">
+        <a class="navbar-brand" href="/">
+            <img src="{% static './images/logo.png' %}" alt="Logo" class="img-fluid">
+        </a>
+        <div class="d-flex ms-auto align-items-center pe-4">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse bg-lg-transparent" id="navbarSupportedContent">
+            <ul class="navbar-nav mt-4 mt-lg-0 text-white ms-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page" href="/">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item px-2 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Locations
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+
+                </li>
+                <li class="nav-item px-2 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink1" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ps-lg-4 pe-4 ps-2 mb-4 mb-lg-0 d-flex align-items-center">
+                    <input type="text" class="search border border-primary form-control rounded-pill text-primary"
+                        placeholder="search here..">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- end navbar -->
