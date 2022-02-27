@@ -90,9 +90,7 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 
 if ENV == 'production':
     DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
+        'default': dj_database_url.config(default=config('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -147,6 +145,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
