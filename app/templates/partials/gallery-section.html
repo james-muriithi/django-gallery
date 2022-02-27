@@ -6,5 +6,8 @@
             {% include 'partials/image-card.html' %}
         </div>
         {% endfor %}
+        {% if images.count == 0 %}
+        <p class="text-center pt-4">No images yet</p>
+        {% endif %}
     </div>
 </section>

@@ -30,7 +30,7 @@
                             <a class="dropdown-item" href="{% url 'location'  location_slug=location.slug %}">{{location}}</a>
                         </li>
                         {% endfor %}
-                        {% if locations.count == 1 %}
+                        {% if locations.count == 0 %}
                         <p class="text-center">No locations yet</p>
                         {% endif %}
                     </ul>
@@ -47,7 +47,7 @@
                             <a class="dropdown-item" href="{% url 'category'  category_slug=category.slug %}">{{category}}</a>
                         </li>
                         {% endfor %}
-                        {% if categories.count == 1 %}
+                        {% if categories.count == 0 %}
                         <p class="text-center">No categories yet</p>
                         {% endif %}
                     </ul>
