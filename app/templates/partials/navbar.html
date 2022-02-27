@@ -41,7 +41,9 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink1">
                         {% for category in categories %}
-                        <li><a class="dropdown-item" href="#">{{category}}</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'category'  category_slug=category.slug %}">{{category}}</a>
+                        </li>
                         {% endfor %}
                         {% if categories.count == 1 %}
                         <p class="text-center">No categories yet</p>
