@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'gallery',
         'USER': config('DB_USER', default=''),
-        'PASSWORD':config('DB_PASSWORD', default=''),
+        'PASSWORD': config('DB_PASSWORD', default=''),
     },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -144,7 +144,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CSRF
-CSRF_COOKIE_SECURE = False  if ENV == 'development' else True
+CSRF_COOKIE_SECURE = False if ENV == 'development' else True
 
 
 # setup cloudinary credentials for django-cloudinary

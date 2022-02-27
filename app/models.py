@@ -31,7 +31,7 @@ class Location(models.Model):
     # get location by slug
     @classmethod
     def get_location_by_slug(cls, slug):
-        return cls.objects.get(slug=slug)  
+        return cls.objects.get(slug=slug)
 
     def __str__(self):
         return self.name
@@ -53,7 +53,7 @@ class Category(models.Model):
 
     # delete category from database
     def delete_category(self):
-        self.delete()   
+        self.delete()
 
     @classmethod
     def get_categories(cls, limit=None):
@@ -63,15 +63,17 @@ class Category(models.Model):
     # get category by slug
     @classmethod
     def get_category_by_slug(cls, slug):
-        return cls.objects.get(slug=slug)     
+        return cls.objects.get(slug=slug)
 
     def __str__(self):
         return self.name
 
-    class Meta:    
+    class Meta:
         verbose_name_plural = "categories"
 
 # Image model
+
+
 class Image(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -82,14 +84,14 @@ class Image(models.Model):
 
     @property
     def image_url(self):
-        return self.image.build_url(height = 250, crop = 'pad', format='webp')
+        return self.image.build_url(height=250, crop='pad', format='webp')
 
     # save image to database
     def save_image(self):
         self.save()
 
-
     # update image
+
     def update_image(self, name, description, location, category):
         self.name = name
         self.description = description
