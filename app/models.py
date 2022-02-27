@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 # location model
 class Location(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=100, unique=True)
 
     # save location to database
     def save_location(self):
