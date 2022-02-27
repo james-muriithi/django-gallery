@@ -35,7 +35,7 @@ ENV = config('ENV', default='development')
 SECRET_KEY = 'django-insecure-9rigwblr=()%kl)jy1fj86%q+4qb31bmi#3907+umqu%mg&xfw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if ENV == 'development' else True
+DEBUG = config('DEBUG', default=True)
 
 ALLOWED_HOSTS = ['*']
 
