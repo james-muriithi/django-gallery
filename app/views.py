@@ -23,3 +23,9 @@ def search(request):
     title = f'Search results for {q}' 
     return render(request, 'gallery.html', {'images':images, 'title': title})   
 
+
+def handler404(request, exception, template_name="404.html"):
+    context = {}
+    response = render(request, '404.html', context=context)
+    response.status_code = 404
+    return response
