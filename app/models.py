@@ -1,3 +1,4 @@
+from pickle import TRUE
 from django.db import models
 # cloudinary
 from cloudinary.models import CloudinaryField
@@ -6,6 +7,7 @@ from cloudinary.models import CloudinaryField
 # location model
 class Location(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, null=TRUE, unique=True)
 
     # save location to database
     def save_location(self):
@@ -27,6 +29,7 @@ class Location(models.Model):
 # category model
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, null=TRUE, unique=True)
 
     # save category to database
     def save_category(self):
@@ -39,11 +42,13 @@ class Category(models.Model):
 
     # delete category from database
     def delete_category(self):
-        self.delete()
+        self.delete()    
 
     def __str__(self):
         return self.name
 
+    class Meta:    
+        verbose_name_plural = "categories"
 
 # Image model
 class Image(models.Model):
