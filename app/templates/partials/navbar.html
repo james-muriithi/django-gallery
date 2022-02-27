@@ -26,7 +26,9 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                         {% for location in locations %}
-                        <li><a class="dropdown-item" href="#">{{location}}</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'location'  location_slug=location.slug %}">{{location}}</a>
+                        </li>
                         {% endfor %}
                         {% if locations.count == 1 %}
                         <p class="text-center">No locations yet</p>
@@ -51,8 +53,10 @@
                     </ul>
                 </li>
                 <li class="nav-item ps-lg-4 pe-4 ps-2 mb-4 mb-lg-0 d-flex align-items-center">
-                    <input type="text" class="search border border-primary form-control rounded-pill text-primary"
-                        placeholder="search here..">
+                    <form action="{% url 'search' %}" class="">
+                        <input type="text" class="search border border-primary form-control rounded-pill text-primary"
+                        placeholder="search here.." name="q">
+                    </form>
                 </li>
             </ul>
         </div>
