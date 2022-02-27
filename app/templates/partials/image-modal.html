@@ -1,5 +1,5 @@
 {% load static %}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="image-modal-{{image.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header border-0">
@@ -7,31 +7,29 @@
             </div>
             <div class="modal-body px-3">
                 <div class="image-details">
-                    <img src="{% static './images/hotel.png' %}" alt="" class="img-fluid w-100">
+                    <img src="{{ image.image.url }}" alt="" class="img-fluid w-100">
                     <div class="details pt-3 pb-4">
                         <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-8">
                                 <h2 class="fw-bold fs-3">
-                                    Diani Hotel
+                                    {{ image.name }}
                                 </h2>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-outline-primary px-3 py-1 text-sm me-3">
-                                        Diani
+                                        {{ image.location }}
                                     </a>
                                     <a href="#" class="btn btn-outline-primary px-3 py-1 text-sm me-3">
-                                        Hotels
+                                        {{ image.category }}
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <p class="text-muted pt-3 pb-0">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, reprehenderit fugiat
-                            nihil nesciunt voluptates, consequatur rerum error molestiae libero, nulla vel nisi
-                            expedita ipsa doloribus itaque facilis quaerat voluptate. Eligendi!
+                            {{ image.description }}
                         </p>
-                        <div data-url="#"
+                        <div data-url="{{ image.image.url }}"
                             class="share bg-secondary rounded-circle d-flex justify-content-center align-items-center">
                             <span class="material-icons">share</span>
                         </div>

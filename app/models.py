@@ -2,6 +2,7 @@ from pickle import TRUE
 from django.db import models
 # cloudinary
 from cloudinary.models import CloudinaryField
+from cloudinary import CloudinaryImage
 
 
 # location model
@@ -68,6 +69,10 @@ class Image(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = CloudinaryField('image')
     created_at = models.DateTimeField(auto_now_add=True)
+
+    @property
+    def image_url(self):
+        return self.image.build_url(height = 250, crop = 'pad', format='webp')
 
     # save image to database
     def save_image(self):

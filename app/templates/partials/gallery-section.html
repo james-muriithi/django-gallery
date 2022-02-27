@@ -1,8 +1,10 @@
 <section class="py-5 gallery-section container-fluid" id="gallery-section">
     <h2 class="fw-bold text-center"><span class="text-primary">G</span>allery</h2>
     <div class="row pt-4">
+        {% for image in images %}
         <div class="col-sm-6 col-xl-3 col-lg-4">
             {% include 'partials/image-card.html' %}
         </div>
+        {% endfor %}
     </div>
 </section>
