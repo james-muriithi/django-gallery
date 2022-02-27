@@ -25,9 +25,12 @@
                         Locations
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        {% for location in locations %}
+                        <li><a class="dropdown-item" href="#">{{location}}</a></li>
+                        {% endfor %}
+                        {% if locations.count == 1 %}
+                        <p class="text-center">No locations yet</p>
+                        {% endif %}
                     </ul>
 
                 </li>
@@ -37,9 +40,12 @@
                         Categories
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        {% for category in categories %}
+                        <li><a class="dropdown-item" href="#">{{category}}</a></li>
+                        {% endfor %}
+                        {% if categories.count == 1 %}
+                        <p class="text-center">No categories yet</p>
+                        {% endif %}
                     </ul>
                 </li>
                 <li class="nav-item ps-lg-4 pe-4 ps-2 mb-4 mb-lg-0 d-flex align-items-center">

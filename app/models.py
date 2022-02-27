@@ -22,6 +22,11 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+    @classmethod
+    def get_locations(cls, limit=None):
+        locations = cls.objects.all()
+        return locations if not limit else locations[:limit]
+
     def __str__(self):
         return self.name
 
@@ -42,7 +47,12 @@ class Category(models.Model):
 
     # delete category from database
     def delete_category(self):
-        self.delete()    
+        self.delete()   
+
+    @classmethod
+    def get_categories(cls, limit=None):
+        categories = cls.objects.all()
+        return categories if not limit else categories[:limit]     
 
     def __str__(self):
         return self.name
