@@ -28,6 +28,11 @@ class Location(models.Model):
         locations = cls.objects.all()
         return locations if not limit else locations[:limit]
 
+    # get location by slug
+    @classmethod
+    def get_location_by_slug(cls, slug):
+        return cls.objects.get(slug=slug)  
+
     def __str__(self):
         return self.name
 
@@ -53,7 +58,12 @@ class Category(models.Model):
     @classmethod
     def get_categories(cls, limit=None):
         categories = cls.objects.all()
-        return categories if not limit else categories[:limit]     
+        return categories if not limit else categories[:limit]
+
+    # get category by slug
+    @classmethod
+    def get_category_by_slug(cls, slug):
+        return cls.objects.get(slug=slug)     
 
     def __str__(self):
         return self.name
