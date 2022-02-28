@@ -126,7 +126,7 @@ class Image(models.Model):
     # search images
     @classmethod
     def search_image(cls, search_term):
-        images = cls.objects.filter(name__icontains=search_term)
+        images = cls.objects.filter(location__name__icontains=search_term)
         return images
 
     # delete image from database
