@@ -52,7 +52,7 @@ python3.8 manage.py runserver
 * open the browser and navigate to http://127.0.0.1:8000/ to see the application in action
 
 ## Design
-[Link to design]()
+[Link to design](https://www.figma.com/file/uMYxypoOvxMptkg5a7oaDS/Gallery?node-id=0%3A1)
 ![Design 1](./screenshots/design.png)
 ![Design 2](./screenshots/design2.png)
 
