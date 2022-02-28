@@ -52,13 +52,21 @@ python3.8 manage.py runserver
 * open the browser and navigate to http://127.0.0.1:8000/ to see the application in action
 
 ## Design
+[Link to design]()
+![Design 1](./screenshots/design.png)
+![Design 2](./screenshots/design2.png)
 
 ## Screenshot
+![Screenshot 1](./screenshots/screenshot.png)
+![Screenshot 2](./screenshots/screenshot2.png)
+![Screenshot 3](./screenshots/screenshot3.png)
 
 ## Live link
 [Here is the link to the live site](https://django-gallery-moringa.herokuapp.com/)
+
+
 ## Contact details
-Email: james@student.moringaschool.com
+Email: james.muthike@student.moringaschool.com
 
 ## MIT licence
 
